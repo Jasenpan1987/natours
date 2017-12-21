@@ -75,6 +75,7 @@ body {
 
 .paragraph {
   font-size: $font-size-default;
+  text-align: justify;
   
   &:not(:last-child) { // every thing except last child
     margin-bottom: 3rem;

@@ -1,0 +1,41 @@
+.composition {
+  position: relative;
+  &__photo {
+    width: 55%; // flexable images for responsive
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+    border-radius: 2px;
+    position: absolute;
+    transition: all 0.2s;
+    outline-offset: 1.2rem;
+
+    &--p1 {
+      left: 0;
+      top: -2rem;
+      z-index: 10;
+    }
+    
+    &--p2 {
+      right: 0;
+      top: 2rem;
+      z-index: 10;
+    }
+
+    &--p3 {
+      left: 20%;
+      top: 10rem;
+      z-index: 10;
+    }
+
+    &:hover {
+      outline: 1.2rem solid $color-primary;
+      transform: scale(1.05) translateY(-0.5rem);
+      box-shadow: 0 2.5rem 4rem rgba($color-black, 0.8);
+      z-index: 20;
+    }
+  }
+
+  // unselected photos will all shrink
+  &:hover &__photo:not(:hover) { // .composition:hover .composition__photo:not(hover)
+    transform: scale(0.9);
+  }
+}
