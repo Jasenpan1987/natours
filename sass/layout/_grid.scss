@@ -1,7 +1,6 @@
 .row {
   // if the viewport is less than 1140px, max-width will take 100% of the width
   max-width: $grid-width;
-  background-color: #eee;
   margin: 0 auto; // horizontally centers a block element of another block element
   
   &:not(:last-child) { // not: everything except
@@ -19,7 +18,6 @@
   // this ^ will select every single element that has an attribute of class START with "col-"
   [class^="col-"] { 
     float: left;
-    background-color: orangered;
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
     }
