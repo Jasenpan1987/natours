@@ -1,0 +1,19 @@
+
+*,
+*::before,
+*::after { /* global reset */
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html { // defines 1 rem
+  /* rem not work below ie9 */
+  /* font-size: 10px; easier to calculate but bad practice */
+  font-size: 62.5%; /* 10(target) / 16(browser default) this allows user to zoom in/out */
+}
+
+body {
+  box-sizing: border-box;
+}
+

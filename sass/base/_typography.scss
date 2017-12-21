@@ -1,0 +1,48 @@
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: $color-gray-dark;
+  padding: 3rem;
+}
+
+/*
+ how to be absolutely position a box:
+ 1) parent relative
+ 2) set top: 50% or any percentage I want as well as left
+ 3) transform: translate(-50%, -50%) will move the content by 50% and 50% to its top and left
+*/
+
+.heading-primary {
+  color: $color-white;
+  text-transform: uppercase;
+  /* remove the little shake for css animations */
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+
+  &--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 700;
+    letter-spacing: 3.5rem;
+  
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    /* animation-delay: 3s; */
+    /* animation-iteration-count: 3; */
+  }
+
+  &--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+  
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+  }
+}
