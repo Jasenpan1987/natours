@@ -36,6 +36,16 @@
     }
   }
 
+  &--primary {
+    background-color: $color-primary;
+    color: $color-white;
+
+    &::after {
+      background-color: $color-primary;
+      color: $color-white;
+    }
+  }
+
   &--animated {
     animation-name: moveInUp;
     animation-duration: 0.5s;
