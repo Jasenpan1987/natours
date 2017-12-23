@@ -1,14 +1,19 @@
 .btn {
+  &,
   &:link,
   &:visited {
     display: inline-block;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 1.5rem 4rem;
+    padding: 1.3rem 4rem;
     border-radius: 10rem;
     transition: all 0.2s;
     position: relative;
     font-size: $font-size-default;
+
+    // for <button> element
+    border: none;
+    cursor: pointer;
   }
 
   &:hover {
@@ -21,18 +26,20 @@
     }
   }
 
-  &:active { /* clicked */
+  &:active,
+  &:focus { /* clicked */
+    outline: none;
     transform: translateY(-0.1rem);
     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
   }
 
   &--white {
     background-color: $color-white;
-    color: $color-gray-dark;
+    color: $color-gray-dark-1;
 
     &::after {
       background-color: $color-white;
-      color: $color-gray-dark;
+      color: $color-gray-dark-1;
     }
   }
 

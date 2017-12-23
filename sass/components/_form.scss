@@ -1,0 +1,98 @@
+.form {
+  &__group {
+
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__input {
+    font-size: 1.5rem;
+    // input doesn't inherit its parent's font properties
+    font-family: inherit;
+    color: inherit;
+    padding: 0.8rem 1.5rem;
+    border-radius: 2px;
+    background-color: rgba($color-white, 0.5);
+    border: none;
+    border-bottom: 0.15rem solid transparent;
+    width: 100%;
+    display: block;
+    transition: all 0.4s;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+      border-bottom: 0.15rem solid $color-primary;
+    }
+
+    &::-webkit-input-placeholder { // only works on safari and chrome
+      color: $color-gray-dark-2;
+    }
+
+    &:focus:invalid {
+      border-bottom: 0.15rem solid $color-secondary-dark;
+    }
+  }
+
+  &__label {
+    font-size: 0.2rem;
+    font-weight: 700;
+    margin-left: 1.5rem;
+    margin-top: 0.70rem;
+    display: block;
+    transition: all 0.4s;
+  }
+
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
+    visibility: hidden; // we can't animate visibility
+    transform: translateY(-1rem);
+  }
+
+  &__radio-group {
+    width: 49%;
+    display: inline-block;
+  }
+
+  &__radio-label {
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: relative;
+    padding-left: 4rem;
+  }
+
+  &__radio-button {
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    top: -0.4rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 5px solid $color-primary;
+    border-radius: 50%;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 1rem;
+      width: 1rem;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $color-primary;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+  }
+
+  &__radio-input:checked +&__radio-label>&__radio-button::after {
+    opacity: 1;
+  }
+
+  &__radio-input {
+    display: none;
+  }
+}
