@@ -283,9 +283,9 @@ body {
       .card__side--back-1 {
         background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
       .card__side--back-2 {
-        background-image: linear-gradient(to right bottom, #2998ff, #28b485); }
+        background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
       .card__side--back-3 {
-        background-image: linear-gradient(to right bottom, #2998ff, #28b485); }
+        background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
   .card:hover .card__side--front {
     transform: rotateY(-180deg); }
   .card:hover .card__side--back {
@@ -548,12 +548,12 @@ body {
   font-size: 1.4rem; }
   .footer__logo-box {
     text-align: center;
-    margin-bottom: 6rem; }
+    margin-bottom: 3rem; }
   .footer__logo {
     width: 15rem;
     height: auto;
     text-align: center;
-    margin-bottom: 7rem; }
+    margin-bottom: 5rem; }
   .footer__navigation {
     border-top: 1px solid #777;
     padding-top: 2rem;
