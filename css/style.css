@@ -190,7 +190,7 @@ body {
   z-index: -1;
   transition: all 1s; }
 
-.btn-text:link, .btn-text:visited {
+.btn--text:link, .btn--text:visited {
   color: #55c57a;
   display: inline-block;
   text-decoration: none;
@@ -199,13 +199,13 @@ body {
   font-size: 1.6rem;
   transition: all 0.2s; }
 
-.btn-text:hover {
+.btn--text:hover {
   color: #fff;
   background-color: #55c57a;
   transform: translateY(-0.2rem);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15); }
 
-.btn-text:active {
+.btn--text:active {
   transform: translateY(-0.1rem); }
 
 .composition {
@@ -356,6 +356,51 @@ body {
     font-size: 6rem;
     font-weight: 100; }
 
+.story {
+  width: 70%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  border-radius: 0.3rem;
+  padding: 5rem;
+  padding-left: 7.5rem;
+  font-size: 1.6rem;
+  transform: skewX(-12deg); }
+  .story__shape {
+    height: 12rem;
+    width: 12rem;
+    background-color: orangered;
+    position: relative;
+    float: left;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-2rem) skewX(12deg); }
+  .story__image {
+    height: 100%;
+    transform: translateX(-4rem) scale(1.1); }
+  .story__text {
+    transform: skewX(12deg); }
+  .story__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.5s;
+    backface-visibility: hidden; }
+  .story:hover .story__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .story:hover .story__image {
+    transform: translateX(-4rem) scale(1);
+    filter: blur(3px) brightness(75%); }
+
 .header {
   position: relative;
   height: 95vh;
@@ -422,3 +467,7 @@ body {
   background-color: #f7f7f7;
   padding: 25rem 0 13rem 0;
   margin-top: -7rem; }
+
+.section-stories {
+  padding: 15rem 0;
+  background-color: #f7f7f7; }
