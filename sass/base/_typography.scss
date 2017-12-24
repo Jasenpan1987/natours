@@ -5,7 +5,6 @@ body {
   /* font-size: 16px; */
   line-height: 1.7;
   color: $color-gray-dark-1;
-  padding: 3rem;
 }
 
 /*
@@ -33,6 +32,15 @@ body {
     animation-timing-function: ease-out;
     /* animation-delay: 3s; */
     /* animation-iteration-count: 3; */
+
+    @include respond(tab-port) {
+      letter-spacing: 1.5rem;
+    }
+
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-size: 5rem;
+    }
   }
 
   &--sub {
@@ -44,6 +52,10 @@ body {
     animation-name: moveInRight;
     animation-duration: 1s;
     animation-timing-function: ease-out;
+
+    @include respond(phone) {
+      letter-spacing: 0.5rem;
+    }
   }
 }
 
@@ -60,6 +72,16 @@ body {
   color: transparent;
   // make text with gradient color end
   transition: all 0.2s;
+
+  @include respond(tab-port) {
+    font-size: 3rem;
+    letter-spacing: 1px;
+  }
+
+  @include respond(phone) {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
 
   &:hover {
     transform: skewY(5deg) skewX(15deg) scale(1.1);
