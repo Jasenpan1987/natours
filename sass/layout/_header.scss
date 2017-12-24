@@ -41,7 +41,7 @@
     text-align: center;
     transform: translate(-50%, -50%); /* referenced the current element */
 
-    @include respond(phone) {
+    @include respond(tab-land) {
       top: 50%;
     }
   }
