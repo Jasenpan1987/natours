@@ -603,12 +603,23 @@ body {
   background-position: top;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  @media (max-width: 37.5em) {
+    .header {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
   .header__logo-box {
     position: absolute;
     top: 4rem;
     left: 4rem; }
+    @media (max-width: 37.5em) {
+      .header__logo-box {
+        top: 2rem;
+        left: 2rem; } }
   .header__logo {
     height: 3.5rem; }
+    @media (max-width: 37.5em) {
+      .header__logo {
+        height: 2.5rem; } }
   .header__text-box {
     position: absolute;
     top: 40%;
@@ -616,6 +627,9 @@ body {
     text-align: center;
     transform: translate(-50%, -50%);
     /* referenced the current element */ }
+    @media (max-width: 37.5em) {
+      .header__text-box {
+        top: 50%; } }
 
 .row {
   max-width: 100rem;
@@ -710,6 +724,12 @@ body {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   text-align: center;
   cursor: pointer; }
+  @media (max-width: 37.5em) {
+    .navigation__button {
+      height: 4rem;
+      width: 4rem;
+      top: 1.5rem;
+      right: 2.9rem; } }
 
 .navigation__background {
   height: 5rem;
@@ -721,6 +741,12 @@ body {
   background-image: radial-gradient(#7ed56f, #28b485);
   z-index: 100;
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
+  @media (max-width: 37.5em) {
+    .navigation__background {
+      height: 3.5rem;
+      width: 3.5rem;
+      top: 1.6rem;
+      right: 3rem; } }
 
 .navigation__nav {
   width: 100vw;
@@ -772,11 +798,17 @@ body {
 .navigation__icon {
   position: relative;
   margin-top: 3.2rem; }
+  @media (max-width: 37.5em) {
+    .navigation__icon {
+      margin-top: 2.1rem; } }
   .navigation__icon, .navigation__icon::before, .navigation__icon::after {
     width: 3rem;
     height: 2px;
     background-color: #333;
     display: inline-block; }
+    @media (max-width: 37.5em) {
+      .navigation__icon, .navigation__icon::before, .navigation__icon::after {
+        width: 2.5rem; } }
   .navigation__icon::before, .navigation__icon::after {
     content: "";
     position: absolute;
@@ -784,8 +816,14 @@ body {
     transition: all 0.2s; }
   .navigation__icon::before {
     top: -0.8rem; }
+    @media (max-width: 37.5em) {
+      .navigation__icon::before {
+        top: -0.7rem; } }
   .navigation__icon::after {
     top: 0.8rem; }
+    @media (max-width: 37.5em) {
+      .navigation__icon::after {
+        top: 0.7rem; } }
 
 .navigation__button:hover .navigation__icon::before {
   top: -1rem; }

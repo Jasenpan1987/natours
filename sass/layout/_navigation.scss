@@ -16,6 +16,13 @@
     box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
     text-align: center;
     cursor: pointer;
+
+    @include respond(phone) {
+      height: 4rem;
+      width: 4rem;
+      top: 1.5rem;
+      right: 2.9rem;
+    }
   }
 
   &__background {
@@ -30,6 +37,13 @@
     
     // transform: scale(80);
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+
+    @include respond(phone) {
+      height: 3.5rem;
+      width: 3.5rem;
+      top: 1.6rem;
+      right: 3rem;
+    }
   }
 
   &__nav {
@@ -97,6 +111,10 @@
     position: relative;
     margin-top: 3.2rem;
 
+    @include respond(phone) {
+      margin-top: 2.1rem;
+    }
+
     &,
     &::before,
     &::after {
@@ -104,6 +122,10 @@
       height: 2px;
       background-color: $color-gray-dark-3;
       display: inline-block;
+
+      @include respond(phone) {
+        width: 2.5rem;
+      }
     }
 
     &::before,
@@ -116,10 +138,16 @@
 
     &::before {
       top: -0.8rem;
+      @include respond(phone) {
+        top: -0.7rem;
+      }
     }
 
     &::after {
       top: 0.8rem;
+      @include respond(phone) {
+        top: 0.7rem;
+      }
     }
   }
 
