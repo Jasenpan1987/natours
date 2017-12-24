@@ -474,6 +474,14 @@ body {
   padding-left: 7.5rem;
   font-size: 1.6rem;
   transform: skewX(-12deg); }
+  @media (max-width: 56.25em) {
+    .story {
+      width: 100%;
+      padding: 4rem;
+      padding-left: 4rem; } }
+  @media (max-width: 37.5em) {
+    .story {
+      transform: skewX(0); } }
   .story__shape {
     height: 12rem;
     width: 12rem;
@@ -485,11 +493,20 @@ body {
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-2rem) skewX(12deg); }
+    @media (max-width: 37.5em) {
+      .story__shape {
+        transform: translateX(0) skewX(0);
+        float: none;
+        margin: 0 auto; } }
   .story__image {
     height: 100%;
     transform: translateX(-4rem) scale(1.1); }
   .story__text {
     transform: skewX(12deg); }
+    @media (max-width: 37.5em) {
+      .story__text {
+        margin-top: 2rem;
+        transform: skewX(0); } }
   .story__caption {
     position: absolute;
     top: 50%;
@@ -937,6 +954,9 @@ body {
   @media (max-width: 56.25em) {
     .section-features {
       padding: 10rem 7rem; } }
+  @media (max-width: 37.5em) {
+    .section-features {
+      padding: 10rem 2rem; } }
   .section-features > * {
     transform: skewY(7deg); }
 
@@ -947,6 +967,9 @@ body {
   @media (max-width: 56.25em) {
     .section-tours {
       padding: 20rem 7rem 10rem 7rem; } }
+  @media (max-width: 37.5em) {
+    .section-tours {
+      padding: 20rem 0rem 4rem 0rem; } }
 
 .section-stories {
   padding: 15rem 0;

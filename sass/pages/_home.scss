@@ -22,6 +22,10 @@
     padding: 10rem 7rem;
   }
 
+  @include respond(phone) {
+    padding: 10rem 2rem;
+  }
+
   transform: skewY(-7deg);
 
   &>* { // everything which are direct child of this class
@@ -36,6 +40,10 @@
 
   @include respond(tab-port) {
     padding: 20rem 7rem 10rem 7rem;
+  }
+
+  @include respond(phone) {
+    padding: 20rem 0rem 4rem 0rem;
   }
 }
 
