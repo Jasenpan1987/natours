@@ -8,6 +8,10 @@
   transition: transform 0.3s;
   min-height: 27rem;
 
+  @include respond(tab-port) {
+    padding: 2rem;
+    min-height: 20rem;
+  }
   &:hover {
     transform: translateY(-1rem) scale(1.03);
   }
@@ -20,5 +24,8 @@
     color: transparent;
     margin-bottom: -0.5rem;
     background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    @include respond(tab-port) {
+      padding: 0;
+    }
   }
 }

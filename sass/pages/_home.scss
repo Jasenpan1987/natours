@@ -2,6 +2,10 @@
   background-color: $color-gray-light-1;
   padding: 25rem 0;
   margin-top: -20vh;
+
+  @include respond(tab-port) {
+    padding: 19rem 0;
+  }
 }
 
 .section-features {
@@ -14,6 +18,10 @@
     ), url("../img/nat-4.jpg");
   background-size: cover;
 
+  @include respond(tab-port) {
+    padding: 10rem 7rem;
+  }
+
   transform: skewY(-7deg);
 
   &>* { // everything which are direct child of this class
@@ -25,16 +33,28 @@
   background-color: $color-gray-light-1;
   padding: 25rem 0 13rem 0;
   margin-top: -7rem;
+
+  @include respond(tab-port) {
+    padding: 20rem 0 10rem 0;
+  }
 }
 
 .section-stories {
   padding: 15rem 0;
   position: relative;
+
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
 }
 
 .section-book {
   padding: 13rem 0;
   background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
 }
 
 .book {
@@ -49,7 +69,6 @@
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
   
   height: 40rem;
-
 }
 
 .form {
