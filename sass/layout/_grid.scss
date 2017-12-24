@@ -3,8 +3,16 @@
   max-width: $grid-width;
   margin: 0 auto; // horizontally centers a block element of another block element
   
+  @include respond(tab-port) {
+    max-width: 50rem;
+  }
+
   &:not(:last-child) { // not: everything except
     margin-bottom: $gutter-verticle;
+
+    @include respond(tab-port) {
+      margin-bottom: $gutter-verticle-small;
+    }
   }
 
   @include clearfix;
@@ -20,6 +28,15 @@
     float: left;
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+
+      @include respond(tab-port) {
+        margin-right: 0;
+        margin-bottom: $gutter-verticle-small;
+      }
+    }
+
+    @include respond(tab-port) {
+      width: 100% !important;
     }
   }
 
