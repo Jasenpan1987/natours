@@ -1,3 +1,10 @@
+/* break points
+0-600px: phone
+600-900px: tablet portrait
+900-1200px: tablet landscape
+1200px-1800px: normal style (pc)
+1800px+: large screens
+*/
 @keyframes moveInRight {
   0% {
     opacity: 0;
@@ -130,6 +137,18 @@ html {
   /* font-size: 10px; easier to calculate but bad practice */
   font-size: 62.5%;
   /* 10(target) / 16(browser default) this allows user to zoom in/out */ }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 50%; } }
 
 body {
   box-sizing: border-box; }
