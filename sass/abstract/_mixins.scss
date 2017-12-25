@@ -43,20 +43,20 @@
 // 3) by default, 1em == 16px
 @mixin respond($breakpoint) {
   @if $breakpoint == phone { // width < 600
-    @media (max-width: 37.5em) { @content; } // 600px / 16
+    @media only screen and (max-width: 37.5em) { @content; } // 600px / 16
   }
 
   @if $breakpoint == tab-port { // width < 900
-    @media (max-width: 56.25em) { @content; } // 900px / 16
+    @media only screen and (max-width: 56.25em) { @content; } // 900px / 16
   }
 
   @if $breakpoint == tab-land { // width < 1200
-    @media (max-width: 75em) { @content; } // 1200px / 16
+    @media only screen and (max-width: 75em) { @content; } // 1200px / 16
   }
 
   // width < 1800 use default
   
   @if $breakpoint == big-desktop { // width > 1800+
-    @media (min-width: 112.5em) { @content; } // 1800px / 16
+    @media only screen and (min-width: 112.5em) { @content; } // 1800px / 16
   }
 }

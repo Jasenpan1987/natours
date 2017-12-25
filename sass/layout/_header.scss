@@ -14,9 +14,9 @@
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   }
   //-webkit-min-device-pixel-ratio for safari
-  @media (min-resolution: 192dpi) and (min-width: 37.5em),
-    (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
-    (min-width: 125em) { // high resolution screen
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+    only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+    only screen and (min-width: 125em) { // high resolution screen
     background-image: linear-gradient(
       to right bottom,
       rgba($color-primary-light, 0.8),  
