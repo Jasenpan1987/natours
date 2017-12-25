@@ -166,7 +166,8 @@
 
   }
 
-  @include respond(tab-port) {
+  @media only screen and (max-width: 56.25em), 
+    only screen and (hover: none) { // means the device cannot be hovered (hover:hover)
     height: auto;
     border-radius: 0.3rem;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
