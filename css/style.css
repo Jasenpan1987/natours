@@ -180,6 +180,10 @@ body {
     body {
       padding: 0; } }
 
+::selection {
+  background-color: #55c57a;
+  color: #fff; }
+
 .btn, .btn:link, .btn:visited {
   display: inline-block;
   text-transform: uppercase;

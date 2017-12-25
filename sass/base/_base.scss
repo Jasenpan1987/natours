@@ -40,3 +40,8 @@ body {
   }
 }
 
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}
+
