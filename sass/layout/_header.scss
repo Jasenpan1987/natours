@@ -1,6 +1,6 @@
 .header {
   position: relative;
-  height: 95vh;
+  height: 85vh;
   // in normal screen resolution screen, we load the small image
   background-image: linear-gradient(
     to right bottom,
@@ -8,7 +8,14 @@
     rgba($color-primary-dark, 0.8)
     ), url("../img/hero-small.jpg");
 
+  @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+    height: 95vh;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  }
+  //-webkit-min-device-pixel-ratio for safari
   @media (min-resolution: 192dpi) and (min-width: 37.5em),
+    (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
     (min-width: 125em) { // high resolution screen
     background-image: linear-gradient(
       to right bottom,
@@ -19,8 +26,7 @@
 
   background-size: cover;
   background-position: top;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  
 
   @include respond(phone) {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);

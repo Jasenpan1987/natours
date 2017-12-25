@@ -22,14 +22,20 @@
   &__shape {
     height: 12rem;
     width: 12rem;
-    background-color: orangered;
     position: relative;
     float: left;
-    -webkit-shape-outside: circle(50% at 50% 50%); // must be floated, and has width and height
-    shape-outside: circle(50% at 50% 50%);
-    -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
     transform: translateX(-2rem) skewX(12deg);
+    // overflow: hidden;
+    border-radius: 50%;
+
+    @supports (-webkit-clip-path: circle(50% at 50% 50%)) or (clip-path: circle(50% at 50% 50%)) {
+      -webkit-shape-outside: circle(50% at 50% 50%); // must be floated, and has width and height
+      shape-outside: circle(50% at 50% 50%);
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+      border-radius: none;
+    }
+    
 
     @include respond(phone) {
       transform: translateX(0) skewX(0);

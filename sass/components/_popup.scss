@@ -1,5 +1,5 @@
 .popup {
-  position: absolute;
+  position: fixed;
   background-color: rgba($color-black, 0.75);
   z-index: 400;
   top: 0;
@@ -10,6 +10,13 @@
   opacity: 0;
   visibility: hidden;
   transition: all 0.4s 0.2s;
+  // backdropfilter can blur the background, but it currently only work on safari by adding the -webkit auto prefixer
+
+  @supports(-webkit-backdrop-filter: blur(10)) or (backdrop-filter: blur(10)) {
+    -webkit-backdrop-filter: blur(10);
+    backdrop-filter: blur(10);
+    background-color: rgba($color-black, 0.3);
+  }
 
   @include respond(phone) {
     width: 100%;
